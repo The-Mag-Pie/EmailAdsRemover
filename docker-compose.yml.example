@@ -1,0 +1,11 @@
+services:
+  email-ads-remover:
+    build: .
+    restart: always
+    environment:
+      - POP3_SERVER_ADDR=<POP3_SERVER_ADDRESS>
+      - LOGIN=<EMAIL_LOGIN>
+      - AUTH_TOKEN=<AUTH_TOKEN_OR_PASSWORD>
+      - TIMEOUT_MINUTES=10
+      - AD_EMAILS=<AD_EMAIL_ADDRESSES_SEPARATED_BY_SEMICOLON>
+      # example of AD_EMAILS: mail1@ad1.com;mail2@ad2.com;mail3@ad3.com
